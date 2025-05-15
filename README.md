@@ -5,12 +5,6 @@
 Mixed visual cue images, such as cue-conflict images, are known to effectively
 reveal how deep neural networks perceive cues like texture and shape. However, we argue that the influential cue-conflict benchmark suffers from three key limitations: (1) stylization introduces artifacts that blur the distinction between texture and shape cues; (2) evaluation is limited by a small class subset, distorting the full output distribution of n-way models (e.g., 1,000-way for ImageNet pre-trained models); and (3) evaluation metrics are skewed by dominant classes particularly when the model exhibits low precision. These issues distort bias evaluation and weaken alignment with human perception. To address this, we introduce REFINED-BIAS, a diagnostic benchmark that corrects these distortions and better aligns with human visual understanding. REFINED-BIAS generates artifact-free samples using human-recognizable patterns and quantifies cue sensitivity across the full label space using Mean Reciprocal Rank, enabling more robust and interpretable evaluations. Our study show that REFINED-BIAS provides more accurate and human-aligned insights than the prior benchmark. Applied across diverse architectures and training regimes, REFINED-BIAS offers a corrected view on texture and shape biases, setting a new standard for probing visual priors in neural networks. Our code is available at REFINED-BIAS .
 
-## Overview of REFINED-BIAS <!-- 수정 필요 -->
-<img src = "./asset/overview.png" width="100%" height="100%"/>
-<!-- \<img src = "./asset/overview.png" width="100%" height="100%"/> -->
-
-
-
 ## How to reproduce our results
 ### Environmental Setup <!-- 수정해야 됨 -->
 ```
@@ -52,7 +46,7 @@ python eval_refined_bias.py --dataset refined_bias_texture --across arch
 python eval_refined_bias.py --dataset refined_bias_shape --across strategy
 
 # evaluate across learning strategy on REFINED-BIAS texture cue
-python eval_refined_bias.py --dataset refined_bias_texture --across arch
+python eval_refined_bias.py --dataset refined_bias_texture --across strategy
 
 ```
 The above command will print out as shown in the example below:
