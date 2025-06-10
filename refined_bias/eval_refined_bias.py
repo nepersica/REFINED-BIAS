@@ -20,7 +20,6 @@ def main(args):
 
     # Get model names to eval
     model_names = get_model_list(target=args.across)
-    model_names =['vit_small_patch16_224']
 
     # Load dataset and model
     data_loader = load_dataset(dataset=args.dataset, batch_size=args.batch_size, num_workers=args.num_workers)
