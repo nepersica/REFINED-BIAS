@@ -331,7 +331,7 @@ def load_pretrained_model_timm(model_name, pretrained=True):
 
 def load_pretrained_model_torchvision(model_name, eval=True, pretrained=True):
     """
-    Load timm pretrained model for evaluating across learning strategy
+    Load torchvision pretrained model for evaluating across model
     
     Args:
         model_name: model name
