@@ -137,7 +137,7 @@ def load_dataset(dataset, *args, **kwargs):
 
     print("=====================================  DATASET  =====================================")
     print(f"Path: {dataset_path}")
-    print(f"✔ Total images: {len(dataset_obj):,}")  # 천 단위 구분 콤마
+    print(f"✔ Total images: {len(dataset_obj):,}")  
 
     # Define DataLoader
     loader = DataLoader(

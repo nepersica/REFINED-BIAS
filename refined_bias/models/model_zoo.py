@@ -368,7 +368,6 @@ def load_pretrained_model_torchvision(model_name, eval=True, pretrained=True):
         model = torch.hub.load(
                                 _PYTORCH_IMAGE_MODELS, model_name, pretrained=True
                                 )
-        print(model)
         model = NormalizedModel(model, IMAGENET_VIT_MEAN, IMAGENET_VIT_STD)
 
     else:
